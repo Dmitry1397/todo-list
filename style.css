@@ -1,0 +1,204 @@
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    height: 250px;
+    background: url(images/bg-desktop-light.jpg) no-repeat center / cover;
+}
+
+.container {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    padding: 70px 0;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mode-switcher {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: none;
+}
+
+.day {
+    background: transparent url(images/icon-moon.svg) no-repeat center / 25px;
+}
+
+.night {
+    background: transparent url(images/icon-sun.svg) no-repeat center / 25px;
+}
+
+#input {
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin: 30px 0;
+    padding: 20px 50px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    appearance: none;
+    outline: none;
+}
+
+.todo-list {
+    box-sizing: border-box;
+    padding-top: 20px;
+    background: hsl(0, 0%, 100%);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(233, 11%, 84%);
+}
+
+#check {
+    display: block;
+    width: 17px;
+    height: 17px;
+    padding: 0;
+    margin: 0 30px;
+    border: 1px solid hsl(233, 11%, 84%);
+    border-radius: 80px;
+    background: transparent;   
+}
+
+#check.complete {
+    border: none;
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+#check.complete::after {
+    content: url(images/icon-check.svg);
+}
+
+#check.complete:hover {
+    border: none;
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+#check:hover {
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.task p {
+    width: 70%;
+}
+
+.task #done  {
+    text-decoration: line-through;
+    color: hsl(236, 9%, 61%);
+}
+
+#delete {
+    width: 18px;
+    height: 18px;
+    margin: 0 30px;
+    border: none;
+    background: transparent url(images/icon-cross.svg) no-repeat center / 15px;
+}
+
+#delete:hover {
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.menu p {
+    font-size: 12px;
+    color: hsl(236, 9%, 61%);
+}
+
+#number {
+    font-weight: 700;
+}
+
+.filter {
+    display: flex;
+    gap: 10px;
+}
+
+.filter > .active {
+    color: hsl(220, 98%, 61%);
+}
+
+.filter p:hover,
+#clear:hover {
+    cursor: pointer;
+    color: hsl(235, 19%, 35%);
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: 10px;
+    color: hsl(0, 0%, 100%);
+}
+
+p, li, a {
+    font-size: 18px;
+    
+}
+
+@media screen and (max-width: 600px) {
+    
+    .container {
+        width: 90%;
+    }
+
+    .todo-list {
+        position: relative;
+        margin-top: 60px;
+    }
+
+    .filter {
+        
+        position: absolute;
+        top: -50px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+        background: hsl(0, 0%, 100%);
+        border-radius: 5px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+}
+
