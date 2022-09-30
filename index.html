@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css">
+  <link id="css" rel="stylesheet" href="style.css">
 
   <script src="todo.js" defer></script>
   
@@ -24,7 +24,7 @@
     <div class="title">
       <h1>TODO</h1>
 
-      <button id="mode-switcher" class="day"></button>
+      <button id="mode-switcher" class=""></button>
     </div>
 
     <div class="create">
@@ -51,6 +51,20 @@
     </div>
   </div>
 
+  <script>
+    const switcher = document.querySelector('#mode-switcher');
+    const css = document.querySelector('#css');
+
+    switcher.addEventListener('click', () => {
+      if (switcher.className === 'day') {
+        css.setAttribute('href', 'style-dark.css')
+        switcher.className = 'dark';
+      } else {
+        css.setAttribute('href', 'style.css');
+        switcher.className = 'day';
+      }
+    })
+  </script>
   
 </body>
 </html>

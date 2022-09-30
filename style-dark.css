@@ -5,11 +5,12 @@ html {
 
 body {
     margin: 0;
+    background: hsl(235, 21%, 11%);
 }
 
 header {
     height: 250px;
-    background: url(images/bg-desktop-light.jpg) no-repeat center / cover;
+    background: url(images/bg-desktop-dark.jpg) no-repeat center / cover;
 }
 
 .container {
@@ -33,7 +34,7 @@ header {
     width: 25px;
     height: 25px;
     border: none;
-    background: transparent url(images/icon-moon.svg) no-repeat center / 25px;
+    background: transparent url(images/icon-sun.svg) no-repeat center / 25px;
 }
 
 #mode-switcher:hover {
@@ -52,12 +53,14 @@ header {
     border: none;
     appearance: none;
     outline: none;
+    background: hsl(237, 14%, 26%);
+    color: hsl(0, 0%, 100%);
 }
 
 .todo-list {
     box-sizing: border-box;
     padding-top: 20px;
-    background: hsl(0, 0%, 100%);
+    background: hsl(237, 14%, 26%);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 5px;
 }
@@ -72,7 +75,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid hsl(233, 11%, 84%);
+    border-bottom: 1px solid hsl(233, 14%, 35%);
 }
 
 #check {
@@ -103,13 +106,14 @@ header {
 #check:hover {
     cursor: pointer;
     border: 2px solid transparent;
-    background-image: linear-gradient(white, white), linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-image: linear-gradient(hsl(237, 14%, 26%), hsl(237, 14%, 26%)), linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     background-origin: border-box;
     background-clip: padding-box, border-box;
 }
 
 .task p {
     width: 70%;
+    color: hsl(0, 0%, 100%);
 }
 
 .task #done  {
@@ -122,7 +126,7 @@ header {
     height: 18px;
     margin: 0 30px;
     border: none;
-    background: transparent url(images/icon-cross.svg) no-repeat center / 15px;
+    background: transparent url(images/icon-cross-dark.svg) no-repeat center / 15px;
 }
 
 #delete:hover {
@@ -156,7 +160,7 @@ header {
 .filter p:hover,
 #clear:hover {
     cursor: pointer;
-    color: hsl(235, 19%, 35%);
+    color: hsl(0, 0%, 100%);
 }
 
 h1 {
@@ -201,7 +205,7 @@ p, li, a {
         align-items: center;
         gap: 30px;
         width: 100%;
-        background: hsl(0, 0%, 100%);
+        background: hsl(237, 14%, 26%);
         border-radius: 5px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
