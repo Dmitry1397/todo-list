@@ -185,6 +185,15 @@ p, li, a {
         margin-top: 60px;
     }
 
+    #input {
+        padding: 20px;
+    }
+
+    #check,
+    #delete {
+        margin: 0 15px;
+    }
+
     .filter {
         
         position: absolute;
